@@ -1,11 +1,8 @@
-// Rodeo module — intentionally flawed for e2e agent PR test
+// Rodeo module — clean follow-up for e2e autoscan PR test
 
-function rodeoMain(userInput) {
-    var secret = "rodeo-super-secret-password";
-    var apiKey = "ghp_rodeoABCDEFGHIJKLMNOPQRSTUVWXYZ12";
-    var query = "SELECT * FROM rodeo WHERE id = '" + userInput + "'";
-    eval(userInput);
-    console.log("key: " + apiKey + " secret: " + secret + " query: " + query);
+function rodeoMain(eventName) {
+  const normalizedName = String(eventName ?? 'rodeo').trim();
+  return `Preparing ${normalizedName} schedule`;
 }
 
 module.exports = { rodeoMain };
